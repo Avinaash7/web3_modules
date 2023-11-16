@@ -1,0 +1,35 @@
+{
+    "ETH": {
+        "tokenAddress": "0x5aea5775959fbc2557cc8789bc1bf90a239d9a91",
+        "tokenName": "ethereum",
+        "tokenDecimals": "0",
+        "tokenInAddress": "0x000000000000000000000000000000000000800a",
+        "cmcID": "1027"
+
+    },
+    "USDC": {
+        "tokenAddress": "0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4",
+        "tokenName": "usd",
+        "tokenDecimals": "6",
+        "cmcID": "2071"
+
+    },
+    "MUTE": {
+        "tokenAddress": "0x0e97c7a0f8b2c9885c8ac9fc6136e829cbc21d42",
+        "tokenName": "mute",
+        "tokenDecimals": "18",
+        "cmcID": "2071"
+    },
+    "WISP": {
+        "tokenAddress": "0xc8ec5b0627c794de0e4ea5d97ad9a556b361d243",
+        "tokenName": "whisper",
+        "tokenDecimals": "18",
+        "cmcID": "2071"
+    },
+    "WBTC": {
+        "tokenAddress": "0xBBeB516fb02a01611cBBE0453Fe3c580D7281011",
+        "tokenName": "wrapped bitcoin",
+        "tokenDecimals": "8"
+    }
+}
+
