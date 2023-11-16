@@ -69,7 +69,6 @@ class WalletTool:
             if amount > allowance_amount or amount == 0:
                 LOGGER.warning(f" Amount not approved: [PK: {self.id}][{self.pubkey}] ")
 
-                #TODO make sure this is still metamask approve amount.   consider just doing random number
                 approve_amount = 115792089237316195423570985008687907853269984665640564039457584007913129639935
 
                 tx = {
@@ -102,10 +101,6 @@ class WalletTool:
             import pdb; pdb.set_trace()
     #         return False
 
-    # def decrypt_privkey(self, password):
-    #     decr_privkey = EthAccount.decrypt(self.acc.privkeyEncrypted, password).hex()
-
-    #     return decr_privkey
 
     def get_contract(self, address, abi):
         #import pdb; pdb.set_trace()
@@ -146,11 +141,6 @@ class WalletTool:
                     
                     if 'Read timed out' in error_msg:
                         pass
-                    
-                    # elif 'nonce too low' in error_msg:
-                        # LOGGER.warning("Nonce too low... updating nonce..")
-                        # self.get_nonce('ZK')
-                        # continue
 
                     LOGGER.error(f"error sending transaction! {error_msg}")
                     #txn_hash = None
@@ -178,7 +168,6 @@ class WalletTool:
                 while attempts < 3:
                     if status == 1:
                         LOGGER.success(f"==> [PK: {self.id}][{self.pubkey}] txid: {hash} successful!")
-                        # self.acc.deactivate_firewall()
                         return receipts
 
                     elif status is None:
@@ -197,12 +186,10 @@ class WalletTool:
 
                     if rpc_switches == 2:
                         LOGGER.error(f"==> tx failed after 2 rpc switches. exiting")
-                        # self.acc.deactivate_firewall()
                         return receipts
 
                 else:
                     LOGGER.error(f"==> [PK: {self.id}][{self.pubkey}] {hash} maybe failed, who knows.")
-                    # self.acc.deactivate_firewall()
                     return False
 
             except Exception as e:
