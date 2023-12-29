@@ -13,6 +13,15 @@ with open("abi/syncswap/router.json", "r") as file:
     
 with open('abi/syncswap/classic_pool_data.json') as file:
     SYNCSWAP_CLASSIC_POOL_DATA_ABI = json.load(file)
+
+with open("abi/maverick/position.json", "r") as file:
+    MAVERICK_POSITION_ABI = json.load(file)
+
+with open("abi/maverick/maverick_pool.json", "r") as file:
+    MAVERICK_POOL_ABI = json.load(file)
+
+with open("abi/maverick/router.json", "r") as file:
+    MAVERICK_ROUTER_ABI = json.load(file)
     
 # with open("abi/mute/router.json", "r") as file:
 #     MUTE_ROUTER_ABI = json.load(file)
@@ -47,14 +56,14 @@ SYNCSWAP_CONTRACTS = {
 
 
 ZKSYNC_TOKENS = {
-    "ETH": "0x5aea5775959fbc2557cc8789bc1bf90a239d9a91",
+   "ETH": "0x5aea5775959fbc2557cc8789bc1bf90a239d9a91",
     "WETH": "0x5aea5775959fbc2557cc8789bc1bf90a239d9a91",
     "USDC": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
     "USDT": "0x493257fd37edb34451f62edf8d2a0c418852ba4c",
-    #"BUSD": "0x2039bb4116b4efc145ec4f0e2ea75012d6c0f181",
-    #"MATIC": "0x28a487240e4d45cff4a2980d334cc933b7483842",
-   # "OT": "0xd0ea21ba66b67be636de1ec4bd9696eb8c61e9aa",
-    #"MAV": "0x787c09494ec8bcb24dcaf8659e7d5d69979ee508",
+    "BUSD": "0x2039bb4116b4efc145ec4f0e2ea75012d6c0f181",
+    "MATIC": "0x28a487240e4d45cff4a2980d334cc933b7483842",
+    "OT": "0xd0ea21ba66b67be636de1ec4bd9696eb8c61e9aa",
+    "MAV": "0x787c09494ec8bcb24dcaf8659e7d5d69979ee508",
     "WBTC": "0xbbeb516fb02a01611cbbe0453fe3c580d7281011",
 }
 
@@ -71,4 +80,18 @@ PANCAKE_CONTRACTS = {
 
 SPACEFI_CONTRACTS = {
     "router": "0xbE7D1FD1f6748bbDefC4fbaCafBb11C6Fc506d1d"
+}
+
+MAVERICK_CONTRACTS = {
+    "router": "0x39E098A153Ad69834a9Dac32f0FCa92066aD03f4",
+    "pool": "0x41C8cf74c27554A8972d3bf3D2BD4a14D8B604AB",
+    "pool_information": "0x57D47F505EdaA8Ae1eFD807A860A79A28bE06449",
+}
+
+MAVERICK_POOLS = {
+    "ETH/USDC": "0xafa8ca24eac27b5ae680b7856e54fdb06b5f60be",
+    "WBTC/USDC": "0x697703c8204f89c15f033c6aa489d97e1c837581",
+    "WBTC/ETH": "0xe50a11fb7425e3b09a620700ca814f21172bbe8c",
+    "WETH/USDC": "0xafa8ca24eac27b5ae680b7856e54fdb06b5f60be",
+    "WBTC/WETH": "0xe50a11fb7425e3b09a620700ca814f21172bbe8c"
 }
